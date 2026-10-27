@@ -28,11 +28,11 @@ fig,ax=plt.subplots(figsize=(7.2,3.4))
 for system,label in [('pipeann','PipeANN-Filter'),('gateann','GateANN')]:
     data=df[(df.system==system)&(df.bucket=='high')]
     med=data.groupby('L')[['recall_percent','mean_latency_us']].median()
-    ax.plot(med.recall_percent,med.mean_latency_us,color=colors[system],label=label)
+    ax.plot(med.mean_latency_us,med.recall_percent,color=colors[system],label=label)
     for L,rows in data.groupby('L'):
-        point(ax,rows,'recall_percent','mean_latency_us',colors[system])
-        ax.annotate(f'L={L}',(rows.recall_percent.median(),rows.mean_latency_us.median()),xytext=(3,7),textcoords='offset points',fontsize=8)
-ax.set(xlabel='Recall@10 (%)',ylabel='Mean latency (us)',ylim=(400,2700)); ax.legend(); ax.grid(alpha=.2)
+        point(ax,rows,'mean_latency_us','recall_percent',colors[system])
+        ax.annotate(f'L={L}',(rows.mean_latency_us.median(),rows.recall_percent.median()),xytext=(3,7),textcoords='offset points',fontsize=8)
+ax.set(xlabel='Mean latency (us)',ylabel='Recall@10 (%)',xlim=(400,2700),ylim=(78,102)); ax.legend(loc='lower right'); ax.grid(alpha=.2)
 fig.tight_layout(); fig.savefig(OUT/'figure1.png',dpi=220); plt.close(fig)
 fig,axes=plt.subplots(1,3,figsize=(9,3.0))
 for ax,metric,label in zip(axes,['recall_percent','mean_latency_us','mean_ios'],['Recall@10 (%)','Mean latency (us)','Logical I/O / query']):

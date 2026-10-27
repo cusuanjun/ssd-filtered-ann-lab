@@ -2,7 +2,7 @@
   ".gitattributes": "23302dd90b8bb74b44d365fafef8df20f809b61cb347023951ecf60a88a29651",
   ".gitignore": "fdc600eab8eb36993cc38349ea5334daa18bd9ce236141002b981dc0f4697203",
   "adaptive_budget.h": "30d896fca08e8f0712b9404aa8a26e6f387f8580fa928cd1700a7cbf0de8af34",
-  "analyze_study.py": "186625ae5ba49111054c7ed1a6187179ceeaceeba04c4f990b2bef8a05d4cce4",
+  "analyze_study.py": "58f792f33965c8edff12c45804fdcb55ec577d32b6b06bc8de17832138ebd854",
   "gateann_aio_compat.patch": "d90657151bf1adc735bc6916e4120690a64288281fe76ac24ad2e4a859662bc1",
   "optimization.patch": "8c0f36aaa8df19cff938805fa5c79c98e3a5bffce77c0f50e1d5b6e85c0a7396",
   "README.md": "fc690a63b790609ebf1b78a602ef7466e3a4eb4355bbc69d97a276bd08587ea4",
@@ -13,7 +13,7 @@
   "data/plan.json": "36d6cd46847648db3a8362bdd9debb46c9029ebd89aa46aa2fc2e945727d434c",
   "data/supplement_results.csv": "6605f3f41311230346f635de44147f066470ab9538a3073a8e4fb986389d7bc4",
   "data/unit_tests.log": "19b067ef68823afb2e3f38854ea6cb8f343380f85952192ffc06df0c37f16039",
-  "figures/figure1.png": "23a859ae47b1dd5a4dd7da79a1f7ca475875b09021386a2512d36f3b789e4004",
+  "figures/figure1.png": "5530b0ff8a027a9cdbfccb9dd00182e08ff70de493051c980dcbb6f75e5165f3",
   "figures/figure2.png": "5bfbaf620dc30a4c969f3b06dc4b3cb05994ec90409087d010da7fd0b9a03be9",
   "figures/figure3.png": "9603cbb350c97d6703e3bf3bdac157f0b484ef650ab654138588e6fc5d17d203"
 }
