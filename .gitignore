@@ -5,5 +5,5 @@ __pycache__/
 test_budget
 build.log
 results.csv
-debug_results.json
-plan.json
+/debug_results.json
+/plan.json

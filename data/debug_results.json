@@ -1,0 +1,53 @@
+[
+  {
+    "tier": "debug_100000",
+    "bucket": "high",
+    "repeat": 2,
+    "variant": "baseline",
+    "L": 320,
+    "recall_percent": 96.39999999999999,
+    "mean_latency_us": 1107.4197120708748,
+    "qps": 903.0,
+    "mean_ios": 41.85,
+    "filter_skips": 281.88,
+    "io_time_us": 178.0,
+    "tunnel_time_us": 404.0,
+    "process_time_us": 212.0,
+    "peak_rss_kb": 124452,
+    "elapsed_seconds": 0.3511927127838135
+  },
+  {
+    "tier": "debug_100000",
+    "bucket": "high",
+    "repeat": 2,
+    "variant": "disabled",
+    "L": 320,
+    "recall_percent": 96.39999999999999,
+    "mean_latency_us": 990.0990099009902,
+    "qps": 1010.0,
+    "mean_ios": 41.85,
+    "filter_skips": 281.88,
+    "io_time_us": 140.0,
+    "tunnel_time_us": 401.0,
+    "process_time_us": 149.0,
+    "peak_rss_kb": 124168,
+    "elapsed_seconds": 0.33052802085876465
+  },
+  {
+    "tier": "debug_100000",
+    "bucket": "high",
+    "repeat": 2,
+    "variant": "adaptive",
+    "L": 320,
+    "recall_percent": 96.55,
+    "mean_latency_us": 1112.3470522803113,
+    "qps": 899.0,
+    "mean_ios": 42.99,
+    "filter_skips": 293.56,
+    "io_time_us": 148.0,
+    "tunnel_time_us": 437.0,
+    "process_time_us": 161.0,
+    "peak_rss_kb": 124484,
+    "elapsed_seconds": 0.3553199768066406
+  }
+]
