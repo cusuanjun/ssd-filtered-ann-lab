@@ -1,0 +1,18 @@
+{
+  ".gitignore": "ed78d240d045d03e3b320c24c06db2e19bb68310a705e07f66f4030c18faa006",
+  "adaptive_budget.h": "30d896fca08e8f0712b9404aa8a26e6f387f8580fa928cd1700a7cbf0de8af34",
+  "analyze_study.py": "186625ae5ba49111054c7ed1a6187179ceeaceeba04c4f990b2bef8a05d4cce4",
+  "gateann_aio_compat.patch": "d90657151bf1adc735bc6916e4120690a64288281fe76ac24ad2e4a859662bc1",
+  "optimization.patch": "8c0f36aaa8df19cff938805fa5c79c98e3a5bffce77c0f50e1d5b6e85c0a7396",
+  "README.md": "fc690a63b790609ebf1b78a602ef7466e3a4eb4355bbc69d97a276bd08587ea4",
+  "run_study.py": "c4319854d8ab437f35767b9bc1a5ca089aed7fcefd7c851fd8bf9400137f877a",
+  "test_budget.cpp": "abad8418284fae6541c46fbd894c0ab7368fbfce18de60c77a4b3ad224181df3",
+  "data\\baseline_results.csv": "a5a3d03cb5b1353e88067c7ecd07ec0dc7ccf109c009f15adf9b8a9d1cf1e4d5",
+  "data\\debug_results.json": "866625dab8e675b91c97a510dac5dfb188efa4c1a3e103adaff17af215e8917b",
+  "data\\plan.json": "36d6cd46847648db3a8362bdd9debb46c9029ebd89aa46aa2fc2e945727d434c",
+  "data\\supplement_results.csv": "8fb6c6f1830009793d2249f469bbe6183feb3fe8163bdf404b59468734b35ecf",
+  "data\\unit_tests.log": "19b067ef68823afb2e3f38854ea6cb8f343380f85952192ffc06df0c37f16039",
+  "figures\\figure1.png": "23a859ae47b1dd5a4dd7da79a1f7ca475875b09021386a2512d36f3b789e4004",
+  "figures\\figure2.png": "5bfbaf620dc30a4c969f3b06dc4b3cb05994ec90409087d010da7fd0b9a03be9",
+  "figures\\figure3.png": "9603cbb350c97d6703e3bf3bdac157f0b484ef650ab654138588e6fc5d17d203"
+}

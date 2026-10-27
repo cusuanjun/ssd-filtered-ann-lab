@@ -1,0 +1,38 @@
+--- a/tests/search_disk_index_yfcc.cpp
++++ b/tests/search_disk_index_yfcc.cpp
+@@ -16,6 +16,8 @@
+ // =============================================================================
+ 
+ #include <omp.h>
++#include <cstdlib>
++#include "adaptive_budget.h"
+ #include <iomanip>
+ #include <fstream>
+ #include <string>
+@@ -220,6 +222,7 @@
+       Lvec.size(), std::vector<uint32_t>(query_num * recall_at, 0));
+   std::vector<pipeann::QueryStats> stats(query_num);
+ 
++  const bool adaptive = std::getenv("GATEANN_ADAPTIVE") != nullptr;
+   bool is_fa = (search_mode == FILTER_AWARE_PIPE_SEARCH);
+   std::string mode_name = is_fa ? "GateANN(mode=8)" : "PipeANN(mode=2)";
+   std::cout << "\n=== " << mode_name << " [YFCC multi-label] ===\n";
+@@ -243,15 +246,16 @@
+ #pragma omp parallel for schedule(dynamic, 1)
+     for (int64_t i = 0; i < (int64_t)query_num; i++) {
+       const void *ql = query_labels.get(i);
++      const uint64_t query_L = (adaptive && is_fa) ? adaptive_budget(*idx_->get_spmat_filter(), ql, L) : L;
+       if (is_fa) {
+         // mode=8: pre-IO filter + tunneling
+-        idx_->pipe_search(query + i * query_dim, recall_at, mem_L, L,
++        idx_->pipe_search(query + i * query_dim, recall_at, mem_L, query_L,
+                           res_buf.data() + i * recall_at,
+                           nullptr, beamwidth, &stats[i],
+                           nullptr, ql);
+       } else {
+         // mode=2: PipeANN pipe_search + post-filter via selector
+-        idx_->pipe_search(query + i * query_dim, recall_at, mem_L, L,
++        idx_->pipe_search(query + i * query_dim, recall_at, mem_L, query_L,
+                           res_buf.data() + i * recall_at,
+                           nullptr, beamwidth, &stats[i],
+                           &selector, ql);
